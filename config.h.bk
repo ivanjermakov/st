@@ -97,46 +97,39 @@ unsigned int tabspaces = 4;
 static const char *colorname[] = {
 
   /* 8 normal colors */
-  [0] = "#111111", /* black   */
-  [1] = "#e84f4f", /* red     */
-  [2] = "#b7ce42", /* green   */
-  [3] = "#ff9c25", /* yellow  */
-  [4] = "#66aabb", /* blue    */
-  [5] = "#b7416e", /* magenta */
-  [6] = "#9cc2ca", /* cyan    */
-  [7] = "#dddddd", /* white   */
+  [0] = "#0c0d0e", /* black   */
+  [1] = "#e31a1c", /* red     */
+  [2] = "#31a354", /* green   */
+  [3] = "#dca060", /* yellow  */
+  [4] = "#3182bd", /* blue    */
+  [5] = "#756bb1", /* magenta */
+  [6] = "#80b1d3", /* cyan    */
+  [7] = "#b7b8b9", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#797979", /* black   */
-  [9]  = "#d23d3d", /* red     */
-  [10] = "#bde077", /* green   */
-  [11] = "#ffe860", /* yellow  */
-  [12] = "#aaccbb", /* blue    */
-  [13] = "#e16a98", /* magenta */
-  [14] = "#417e8b", /* cyan    */
-  [15] = "#cccccc", /* white   */
+  [8]  = "#737475", /* black   */
+  [9]  = "#e31a1c", /* red     */
+  [10] = "#31a354", /* green   */
+  [11] = "#dca060", /* yellow  */
+  [12] = "#3182bd", /* blue    */
+  [13] = "#756bb1", /* magenta */
+  [14] = "#80b1d3", /* cyan    */
+  [15] = "#fcfdfe", /* white   */
 
   /* special colors */
-  [256] = "#111111", /* background */
-  [257] = "#ffffff", /* foreground */
+  [256] = "#ffffff", /* background */
+  [257] = "#000000", /* foreground */
 };
+
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor
+ * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 256;
-
-/*
- * Colors used, when the specific fg == defaultfg. So in reverse mode this
- * will reverse too. Another logic would only make the simple feature too
- * complex.
- */
-static unsigned int defaultitalic = 7;
-static unsigned int defaultunderline = 7;
 
 /*
  * Default shape of cursor
